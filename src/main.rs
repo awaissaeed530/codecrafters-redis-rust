@@ -8,7 +8,7 @@ fn main() {
             Ok(stream) => {
                 println!("accepted new connection, {}", stream.local_addr().unwrap())
             }
-            Err(_) => {
+            Err(e) => {
                 println!("error: {}", e);
             }
         }
