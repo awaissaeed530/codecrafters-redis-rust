@@ -5,8 +5,8 @@ fn main() {
 
     for stream in listener.incoming() {
         match stream {
-            Ok(stream) => {
-                println!("accepted new connection, {}", stream.local_addr().unwrap())
+            Ok(_stream) => {
+                println!("accepted new connection");
             }
             Err(e) => {
                 println!("error: {}", e);
